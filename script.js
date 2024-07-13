@@ -51,6 +51,16 @@ document.querySelector(".search input").addEventListener("keydown", (event) => {
         }
     }
 });
+// eventListener for search button click
+document.querySelector(".search button").addEventListener("click", () => {
+    const searchBox = document.querySelector(".search input").value;
+
+    if (searchBox) {
+        checkWeather(searchBox);
+    } else {
+        alert("Please enter a city name");
+    }
+});
 
 
 checkWeather("");
